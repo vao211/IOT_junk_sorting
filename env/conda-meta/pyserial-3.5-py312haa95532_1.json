@@ -1,0 +1,569 @@
+{
+  "build": "py312haa95532_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/win-64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0"
+  ],
+  "extracted_package_dir": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\pyserial-3.5-py312haa95532_1",
+  "files": [
+    "Lib/site-packages/pyserial-3.5.dist-info/INSTALLER",
+    "Lib/site-packages/pyserial-3.5.dist-info/LICENSE.txt",
+    "Lib/site-packages/pyserial-3.5.dist-info/METADATA",
+    "Lib/site-packages/pyserial-3.5.dist-info/RECORD",
+    "Lib/site-packages/pyserial-3.5.dist-info/REQUESTED",
+    "Lib/site-packages/pyserial-3.5.dist-info/WHEEL",
+    "Lib/site-packages/pyserial-3.5.dist-info/direct_url.json",
+    "Lib/site-packages/pyserial-3.5.dist-info/entry_points.txt",
+    "Lib/site-packages/pyserial-3.5.dist-info/top_level.txt",
+    "Lib/site-packages/serial/__init__.py",
+    "Lib/site-packages/serial/__main__.py",
+    "Lib/site-packages/serial/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/serial/__pycache__/__main__.cpython-312.pyc",
+    "Lib/site-packages/serial/__pycache__/rfc2217.cpython-312.pyc",
+    "Lib/site-packages/serial/__pycache__/rs485.cpython-312.pyc",
+    "Lib/site-packages/serial/__pycache__/serialcli.cpython-312.pyc",
+    "Lib/site-packages/serial/__pycache__/serialjava.cpython-312.pyc",
+    "Lib/site-packages/serial/__pycache__/serialposix.cpython-312.pyc",
+    "Lib/site-packages/serial/__pycache__/serialutil.cpython-312.pyc",
+    "Lib/site-packages/serial/__pycache__/serialwin32.cpython-312.pyc",
+    "Lib/site-packages/serial/__pycache__/win32.cpython-312.pyc",
+    "Lib/site-packages/serial/rfc2217.py",
+    "Lib/site-packages/serial/rs485.py",
+    "Lib/site-packages/serial/serialcli.py",
+    "Lib/site-packages/serial/serialjava.py",
+    "Lib/site-packages/serial/serialposix.py",
+    "Lib/site-packages/serial/serialutil.py",
+    "Lib/site-packages/serial/serialwin32.py",
+    "Lib/site-packages/serial/threaded/__init__.py",
+    "Lib/site-packages/serial/threaded/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/serial/tools/__init__.py",
+    "Lib/site-packages/serial/tools/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/serial/tools/__pycache__/hexlify_codec.cpython-312.pyc",
+    "Lib/site-packages/serial/tools/__pycache__/list_ports.cpython-312.pyc",
+    "Lib/site-packages/serial/tools/__pycache__/list_ports_common.cpython-312.pyc",
+    "Lib/site-packages/serial/tools/__pycache__/list_ports_linux.cpython-312.pyc",
+    "Lib/site-packages/serial/tools/__pycache__/list_ports_osx.cpython-312.pyc",
+    "Lib/site-packages/serial/tools/__pycache__/list_ports_posix.cpython-312.pyc",
+    "Lib/site-packages/serial/tools/__pycache__/list_ports_windows.cpython-312.pyc",
+    "Lib/site-packages/serial/tools/__pycache__/miniterm.cpython-312.pyc",
+    "Lib/site-packages/serial/tools/hexlify_codec.py",
+    "Lib/site-packages/serial/tools/list_ports.py",
+    "Lib/site-packages/serial/tools/list_ports_common.py",
+    "Lib/site-packages/serial/tools/list_ports_linux.py",
+    "Lib/site-packages/serial/tools/list_ports_osx.py",
+    "Lib/site-packages/serial/tools/list_ports_posix.py",
+    "Lib/site-packages/serial/tools/list_ports_windows.py",
+    "Lib/site-packages/serial/tools/miniterm.py",
+    "Lib/site-packages/serial/urlhandler/__init__.py",
+    "Lib/site-packages/serial/urlhandler/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/serial/urlhandler/__pycache__/protocol_alt.cpython-312.pyc",
+    "Lib/site-packages/serial/urlhandler/__pycache__/protocol_cp2110.cpython-312.pyc",
+    "Lib/site-packages/serial/urlhandler/__pycache__/protocol_hwgrep.cpython-312.pyc",
+    "Lib/site-packages/serial/urlhandler/__pycache__/protocol_loop.cpython-312.pyc",
+    "Lib/site-packages/serial/urlhandler/__pycache__/protocol_rfc2217.cpython-312.pyc",
+    "Lib/site-packages/serial/urlhandler/__pycache__/protocol_socket.cpython-312.pyc",
+    "Lib/site-packages/serial/urlhandler/__pycache__/protocol_spy.cpython-312.pyc",
+    "Lib/site-packages/serial/urlhandler/protocol_alt.py",
+    "Lib/site-packages/serial/urlhandler/protocol_cp2110.py",
+    "Lib/site-packages/serial/urlhandler/protocol_hwgrep.py",
+    "Lib/site-packages/serial/urlhandler/protocol_loop.py",
+    "Lib/site-packages/serial/urlhandler/protocol_rfc2217.py",
+    "Lib/site-packages/serial/urlhandler/protocol_socket.py",
+    "Lib/site-packages/serial/urlhandler/protocol_spy.py",
+    "Lib/site-packages/serial/win32.py",
+    "Scripts/pyserial-miniterm.exe",
+    "Scripts/pyserial-ports.exe"
+  ],
+  "fn": "pyserial-3.5-py312haa95532_1.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\pyserial-3.5-py312haa95532_1",
+    "type": 1
+  },
+  "md5": "508587ee116034fdb1f33a12694d7b45",
+  "name": "pyserial",
+  "package_tarball_full_path": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\pyserial-3.5-py312haa95532_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Lib/site-packages/pyserial-3.5.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "Lib/site-packages/pyserial-3.5.dist-info/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "f91cb9813de6a5b142b8f7f2dede630b5134160aedaeaf55f4d6a7e2593ca3f3",
+        "sha256_in_prefix": "f91cb9813de6a5b142b8f7f2dede630b5134160aedaeaf55f4d6a7e2593ca3f3",
+        "size_in_bytes": 1885
+      },
+      {
+        "_path": "Lib/site-packages/pyserial-3.5.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "d107773e877e8eb4bc7593f8b086aac1e920b4ebe23ad741cca14cb9d2992764",
+        "sha256_in_prefix": "d107773e877e8eb4bc7593f8b086aac1e920b4ebe23ad741cca14cb9d2992764",
+        "size_in_bytes": 1697
+      },
+      {
+        "_path": "Lib/site-packages/pyserial-3.5.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "985321d27f252ecbaa36c63a88a8912e275bd0550fa74c08243f176e2d0b5341",
+        "sha256_in_prefix": "985321d27f252ecbaa36c63a88a8912e275bd0550fa74c08243f176e2d0b5341",
+        "size_in_bytes": 4877
+      },
+      {
+        "_path": "Lib/site-packages/pyserial-3.5.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "Lib/site-packages/pyserial-3.5.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "89896fe5f5f7e7b3d0c914f6a3ab70d5b37e61c2851472aa07f2f01cee703fe8",
+        "sha256_in_prefix": "89896fe5f5f7e7b3d0c914f6a3ab70d5b37e61c2851472aa07f2f01cee703fe8",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "Lib/site-packages/pyserial-3.5.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "14f249f5457717c9665d3f3352d6d3fd5706eb4d55a11421aa62c416b91fbc24",
+        "sha256_in_prefix": "14f249f5457717c9665d3f3352d6d3fd5706eb4d55a11421aa62c416b91fbc24",
+        "size_in_bytes": 116
+      },
+      {
+        "_path": "Lib/site-packages/pyserial-3.5.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "b3176f447f12353fbf427dc2df73e6d840b41be869c413bc35c7e078310464af",
+        "sha256_in_prefix": "b3176f447f12353fbf427dc2df73e6d840b41be869c413bc35c7e078310464af",
+        "size_in_bytes": 111
+      },
+      {
+        "_path": "Lib/site-packages/pyserial-3.5.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "1528df5875b0f958cf884a8e86db5b88ff85f0e1e7fa58a2c6ad7028bd9f58e0",
+        "sha256_in_prefix": "1528df5875b0f958cf884a8e86db5b88ff85f0e1e7fa58a2c6ad7028bd9f58e0",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "Lib/site-packages/serial/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5dec897fdef45a0eaf63eacda1e01d62e1e75490302584ae0238f75376592344",
+        "sha256_in_prefix": "5dec897fdef45a0eaf63eacda1e01d62e1e75490302584ae0238f75376592344",
+        "size_in_bytes": 3212
+      },
+      {
+        "_path": "Lib/site-packages/serial/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "a12a559270d2d98aa7d89757943b39164d04f1c71d88b209697bcf5948b3423d",
+        "sha256_in_prefix": "a12a559270d2d98aa7d89757943b39164d04f1c71d88b209697bcf5948b3423d",
+        "size_in_bytes": 45
+      },
+      {
+        "_path": "Lib/site-packages/serial/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "66596d6734d71e4414aaf76cc48a1bebcb6fed728d44c988246a5c124c71a651",
+        "sha256_in_prefix": "66596d6734d71e4414aaf76cc48a1bebcb6fed728d44c988246a5c124c71a651",
+        "size_in_bytes": 2981
+      },
+      {
+        "_path": "Lib/site-packages/serial/__pycache__/__main__.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "f211d21380cc1e4389f70d9df3b6490f3e58d67eb46dbf2b3c690f038f2ea37c",
+        "sha256_in_prefix": "f211d21380cc1e4389f70d9df3b6490f3e58d67eb46dbf2b3c690f038f2ea37c",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "Lib/site-packages/serial/__pycache__/rfc2217.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "c72c10f9cd3f59a0a56cef516e424ff430fcb43dd9cd6236dfcc24d410af0d27",
+        "sha256_in_prefix": "c72c10f9cd3f59a0a56cef516e424ff430fcb43dd9cd6236dfcc24d410af0d27",
+        "size_in_bytes": 60559
+      },
+      {
+        "_path": "Lib/site-packages/serial/__pycache__/rs485.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "e49a6434fe3d6ec7eb82f2b8a2feff0f48f41f7b408aa56f28298eec5065ab2f",
+        "sha256_in_prefix": "e49a6434fe3d6ec7eb82f2b8a2feff0f48f41f7b408aa56f28298eec5065ab2f",
+        "size_in_bytes": 3828
+      },
+      {
+        "_path": "Lib/site-packages/serial/__pycache__/serialcli.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "c823b114a97795dddb01c46127bb883d26c1b705d9d120d43dc4976640c5d79b",
+        "sha256_in_prefix": "c823b114a97795dddb01c46127bb883d26c1b705d9d120d43dc4976640c5d79b",
+        "size_in_bytes": 12427
+      },
+      {
+        "_path": "Lib/site-packages/serial/__pycache__/serialjava.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "ba6cbba2ad309627efc4ffcb5bb83aaf2039cc532690f2f6f43d11e724d169fe",
+        "sha256_in_prefix": "ba6cbba2ad309627efc4ffcb5bb83aaf2039cc532690f2f6f43d11e724d169fe",
+        "size_in_bytes": 12790
+      },
+      {
+        "_path": "Lib/site-packages/serial/__pycache__/serialposix.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "a954e7b5955faca03e99cac7ba2944a769c1ce9257c0ab41ce533d9b2adc10b3",
+        "sha256_in_prefix": "a954e7b5955faca03e99cac7ba2944a769c1ce9257c0ab41ce533d9b2adc10b3",
+        "size_in_bytes": 41253
+      },
+      {
+        "_path": "Lib/site-packages/serial/__pycache__/serialutil.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "edfe82e0d09745fd6218cee555f8d96af8b41308679ea428497087868e967e05",
+        "sha256_in_prefix": "edfe82e0d09745fd6218cee555f8d96af8b41308679ea428497087868e967e05",
+        "size_in_bytes": 27412
+      },
+      {
+        "_path": "Lib/site-packages/serial/__pycache__/serialwin32.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "82068b0506a1dfc6632bf83503a90e3c3b8e746cd091001cc82d664c9e2369fb",
+        "sha256_in_prefix": "82068b0506a1dfc6632bf83503a90e3c3b8e746cd091001cc82d664c9e2369fb",
+        "size_in_bytes": 25946
+      },
+      {
+        "_path": "Lib/site-packages/serial/__pycache__/win32.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "421cf93403acc5a04be93731109f347baba689c48fe085fd6f9b7d15456999b2",
+        "sha256_in_prefix": "421cf93403acc5a04be93731109f347baba689c48fe085fd6f9b7d15456999b2",
+        "size_in_bytes": 9284
+      },
+      {
+        "_path": "Lib/site-packages/serial/rfc2217.py",
+        "path_type": "hardlink",
+        "sha256": "9dc1bfe53b38d8cfd39bfed737743b884db8cbe946730bb68c2dcc15212fe817",
+        "sha256_in_prefix": "9dc1bfe53b38d8cfd39bfed737743b884db8cbe946730bb68c2dcc15212fe817",
+        "size_in_bytes": 59700
+      },
+      {
+        "_path": "Lib/site-packages/serial/rs485.py",
+        "path_type": "hardlink",
+        "sha256": "f6deb2b8672d7b7ea093c1b553a3606e82951ad25416ab5ba403978fbbd8c4cd",
+        "sha256_in_prefix": "f6deb2b8672d7b7ea093c1b553a3606e82951ad25416ab5ba403978fbbd8c4cd",
+        "size_in_bytes": 3305
+      },
+      {
+        "_path": "Lib/site-packages/serial/serialcli.py",
+        "path_type": "hardlink",
+        "sha256": "bb94271bdd14c6db6ab061bd9d88248f4194c9bd3020ec739548312788027338",
+        "sha256_in_prefix": "bb94271bdd14c6db6ab061bd9d88248f4194c9bd3020ec739548312788027338",
+        "size_in_bytes": 9190
+      },
+      {
+        "_path": "Lib/site-packages/serial/serialjava.py",
+        "path_type": "hardlink",
+        "sha256": "01c1cba760ffb008a1bbb2ffc02720f26b64edeb5feb30320782ffb6eb61568f",
+        "sha256_in_prefix": "01c1cba760ffb008a1bbb2ffc02720f26b64edeb5feb30320782ffb6eb61568f",
+        "size_in_bytes": 8480
+      },
+      {
+        "_path": "Lib/site-packages/serial/serialposix.py",
+        "path_type": "hardlink",
+        "sha256": "5d56f98513391e1766a1847a04e2e1202ced4172a152803ba1c823a149a9b6f9",
+        "sha256_in_prefix": "5d56f98513391e1766a1847a04e2e1202ced4172a152803ba1c823a149a9b6f9",
+        "size_in_bytes": 35127
+      },
+      {
+        "_path": "Lib/site-packages/serial/serialutil.py",
+        "path_type": "hardlink",
+        "sha256": "3c84f8c7c319f161a85d6f8db5bedc4f65255714589bdcbeee6f2daf65a17c0a",
+        "sha256_in_prefix": "3c84f8c7c319f161a85d6f8db5bedc4f65255714589bdcbeee6f2daf65a17c0a",
+        "size_in_bytes": 21797
+      },
+      {
+        "_path": "Lib/site-packages/serial/serialwin32.py",
+        "path_type": "hardlink",
+        "sha256": "17681ea9a650120c71db1aae9b8881301a40d38c47b34bb0da050e3f5bfbbe00",
+        "sha256_in_prefix": "17681ea9a650120c71db1aae9b8881301a40d38c47b34bb0da050e3f5bfbbe00",
+        "size_in_bytes": 20284
+      },
+      {
+        "_path": "Lib/site-packages/serial/threaded/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "8a45e52987a3465cf30b37bd930c51fee00129ad587ee4f2a9c3e3c375515752",
+        "sha256_in_prefix": "8a45e52987a3465cf30b37bd930c51fee00129ad587ee4f2a9c3e3c375515752",
+        "size_in_bytes": 9319
+      },
+      {
+        "_path": "Lib/site-packages/serial/threaded/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "1ef119c18bfc41105de5ebb79954d80d170ae67fe2c221d34fc6176a20add9a9",
+        "sha256_in_prefix": "1ef119c18bfc41105de5ebb79954d80d170ae67fe2c221d34fc6176a20add9a9",
+        "size_in_bytes": 13846
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "c666abd51806e2cd2f45ad96ac09cd9a2177d0f94e236355ed37c93319ce46f0",
+        "sha256_in_prefix": "c666abd51806e2cd2f45ad96ac09cd9a2177d0f94e236355ed37c93319ce46f0",
+        "size_in_bytes": 139
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/__pycache__/hexlify_codec.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "ed6400227f85b6e74b3630f82d358b6f7410323e4a66555674e6635a023a2429",
+        "sha256_in_prefix": "ed6400227f85b6e74b3630f82d358b6f7410323e4a66555674e6635a023a2429",
+        "size_in_bytes": 6348
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/__pycache__/list_ports.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "143c4f83a9c1dfb4fd00fecc65b489919767c93d71c699ed57d0a8b70649a205",
+        "sha256_in_prefix": "143c4f83a9c1dfb4fd00fecc65b489919767c93d71c699ed57d0a8b70649a205",
+        "size_in_bytes": 4237
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/__pycache__/list_ports_common.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "53cbc722574be25640deb682b7b7b8e6fe61b8de9a535adc6510f3e693bdd63d",
+        "sha256_in_prefix": "53cbc722574be25640deb682b7b7b8e6fe61b8de9a535adc6510f3e693bdd63d",
+        "size_in_bytes": 5666
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/__pycache__/list_ports_linux.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "6c44f4ccdc058a5549a522da4271b476870d9d75493271758b4d9e0f26d2767a",
+        "sha256_in_prefix": "6c44f4ccdc058a5549a522da4271b476870d9d75493271758b4d9e0f26d2767a",
+        "size_in_bytes": 6258
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/__pycache__/list_ports_osx.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "ab79df790a54449341111fb964821dd699f1bf451a5698206a42696a6e99ee4e",
+        "sha256_in_prefix": "ab79df790a54449341111fb964821dd699f1bf451a5698206a42696a6e99ee4e",
+        "size_in_bytes": 11891
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/__pycache__/list_ports_posix.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "bbb3bed885c3f009bc7abe9c747a87b7842089eefa961189ef58e9ebc11f7f81",
+        "sha256_in_prefix": "bbb3bed885c3f009bc7abe9c747a87b7842089eefa961189ef58e9ebc11f7f81",
+        "size_in_bytes": 5269
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/__pycache__/list_ports_windows.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "1ec3a866ecaf50aa7fbbc24c346d37b9b789cdd658f04c89ecb30aed260b7ebe",
+        "sha256_in_prefix": "1ec3a866ecaf50aa7fbbc24c346d37b9b789cdd658f04c89ecb30aed260b7ebe",
+        "size_in_bytes": 14791
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/__pycache__/miniterm.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "90c1e0fa843e966d24e9d898b770478332a76acc05a5f48aa8dec53a8952a412",
+        "sha256_in_prefix": "90c1e0fa843e966d24e9d898b770478332a76acc05a5f48aa8dec53a8952a412",
+        "size_in_bytes": 54100
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/hexlify_codec.py",
+        "path_type": "hardlink",
+        "sha256": "1512523bca5f8cce8047dfd206a2f7e1ee742d592f9737c529d98249c1a7e34f",
+        "sha256_in_prefix": "1512523bca5f8cce8047dfd206a2f7e1ee742d592f9737c529d98249c1a7e34f",
+        "size_in_bytes": 3677
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/list_ports.py",
+        "path_type": "hardlink",
+        "sha256": "7830e8c888684b77fd0f7095a6d86a95052a891da5f97d154c618e063b8ce1ec",
+        "sha256_in_prefix": "7830e8c888684b77fd0f7095a6d86a95052a891da5f97d154c618e063b8ce1ec",
+        "size_in_bytes": 3389
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/list_ports_common.py",
+        "path_type": "hardlink",
+        "sha256": "c791c88211b8348cfe5dfe625fa1a4ef165f75e69db36b6a0ac7f226187721fb",
+        "sha256_in_prefix": "c791c88211b8348cfe5dfe625fa1a4ef165f75e69db36b6a0ac7f226187721fb",
+        "size_in_bytes": 3736
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/list_ports_linux.py",
+        "path_type": "hardlink",
+        "sha256": "5275355583f534923b27c667ee063e03699b8b596e81b159495ced7d7f0fd695",
+        "sha256_in_prefix": "5275355583f534923b27c667ee063e03699b8b596e81b159495ced7d7f0fd695",
+        "size_in_bytes": 4503
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/list_ports_osx.py",
+        "path_type": "hardlink",
+        "sha256": "7a879f3068ae26a0be382bbd6805aaa895fbe701a5073a2a67a91d98c03cd8b3",
+        "sha256_in_prefix": "7a879f3068ae26a0be382bbd6805aaa895fbe701a5073a2a67a91d98c03cd8b3",
+        "size_in_bytes": 11178
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/list_ports_posix.py",
+        "path_type": "hardlink",
+        "sha256": "118a83e6445b9347f66b9b1c6914b8b605860729e4a551fbee36bf1ba4b75211",
+        "sha256_in_prefix": "118a83e6445b9347f66b9b1c6914b8b605860729e4a551fbee36bf1ba4b75211",
+        "size_in_bytes": 4535
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/list_ports_windows.py",
+        "path_type": "hardlink",
+        "sha256": "53813370e02253ae8b5a83dd317236a0e3382c2779bcac0edc381e4d3e8cdea7",
+        "sha256_in_prefix": "53813370e02253ae8b5a83dd317236a0e3382c2779bcac0edc381e4d3e8cdea7",
+        "size_in_bytes": 16021
+      },
+      {
+        "_path": "Lib/site-packages/serial/tools/miniterm.py",
+        "path_type": "hardlink",
+        "sha256": "7d7be4114f4513253b1cf48d13c6dd5f638282219880279ed3aeb2179f27a2db",
+        "sha256_in_prefix": "7d7be4114f4513253b1cf48d13c6dd5f638282219880279ed3aeb2179f27a2db",
+        "size_in_bytes": 37840
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "d7788957e686a4efbc440ca7cccdd725949d2a61dc58dcbe4e1dddbb1588135a",
+        "sha256_in_prefix": "d7788957e686a4efbc440ca7cccdd725949d2a61dc58dcbe4e1dddbb1588135a",
+        "size_in_bytes": 144
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/__pycache__/protocol_alt.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "ab6b4a3005ff91f0fd691b2778be2fb5936d8bbe2290bff7c624b84bde4323a0",
+        "sha256_in_prefix": "ab6b4a3005ff91f0fd691b2778be2fb5936d8bbe2290bff7c624b84bde4323a0",
+        "size_in_bytes": 2325
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/__pycache__/protocol_cp2110.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "3351dfe5bc33776fb77fa2fc5d445897e76a3b33a2df1200f3814e7e867bbad0",
+        "sha256_in_prefix": "3351dfe5bc33776fb77fa2fc5d445897e76a3b33a2df1200f3814e7e867bbad0",
+        "size_in_bytes": 10512
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/__pycache__/protocol_hwgrep.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "a078327cc990252a7016d4887d2ed61deac36e8249bc0045976e9cb16636bfc1",
+        "sha256_in_prefix": "a078327cc990252a7016d4887d2ed61deac36e8249bc0045976e9cb16636bfc1",
+        "size_in_bytes": 3136
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/__pycache__/protocol_loop.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "b77f727f5e169cf863990f6c71760dd71c79adcc41245107601dac4597ae10ed",
+        "sha256_in_prefix": "b77f727f5e169cf863990f6c71760dd71c79adcc41245107601dac4597ae10ed",
+        "size_in_bytes": 14474
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/__pycache__/protocol_rfc2217.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "5dcb4eec81d7a54601fd2ac0815e7e57e5219f8828248adb7487f961e0be62c2",
+        "sha256_in_prefix": "5dcb4eec81d7a54601fd2ac0815e7e57e5219f8828248adb7487f961e0be62c2",
+        "size_in_bytes": 253
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/__pycache__/protocol_socket.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "de8238da4ec5daf0b2081b97d369c0b4f514b6c7a624b2a3decd025ea4890fd1",
+        "sha256_in_prefix": "de8238da4ec5daf0b2081b97d369c0b4f514b6c7a624b2a3decd025ea4890fd1",
+        "size_in_bytes": 16398
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/__pycache__/protocol_spy.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "ebacf21f3f81448c5f4f87e21813a58a567f56dd8e28c14104f65cfb88951f6e",
+        "sha256_in_prefix": "ebacf21f3f81448c5f4f87e21813a58a567f56dd8e28c14104f65cfb88951f6e",
+        "size_in_bytes": 15147
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/protocol_alt.py",
+        "path_type": "hardlink",
+        "sha256": "fa46280a0cbd1b231637ac02f0e7b0f052f4e0b8cbe0db71dc71d5a924ca19c4",
+        "sha256_in_prefix": "fa46280a0cbd1b231637ac02f0e7b0f052f4e0b8cbe0db71dc71d5a924ca19c4",
+        "size_in_bytes": 2033
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/protocol_cp2110.py",
+        "path_type": "hardlink",
+        "sha256": "8942ce4f855dc36d0fff0da37d259db74ae8518d4abbcc495471d873a7772266",
+        "sha256_in_prefix": "8942ce4f855dc36d0fff0da37d259db74ae8518d4abbcc495471d873a7772266",
+        "size_in_bytes": 8540
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/protocol_hwgrep.py",
+        "path_type": "hardlink",
+        "sha256": "19d29d43db44c4a447273b223dc43d13199a2daebe03bd6ae768b88d0c66a019",
+        "sha256_in_prefix": "19d29d43db44c4a447273b223dc43d13199a2daebe03bd6ae768b88d0c66a019",
+        "size_in_bytes": 3159
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/protocol_loop.py",
+        "path_type": "hardlink",
+        "sha256": "e5b6abaeefe17f03646b28e3073e30dec9c1267d06ec2f9f1bbf9098769e4d6a",
+        "sha256_in_prefix": "e5b6abaeefe17f03646b28e3073e30dec9c1267d06ec2f9f1bbf9098769e4d6a",
+        "size_in_bytes": 10623
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/protocol_rfc2217.py",
+        "path_type": "hardlink",
+        "sha256": "20f3bcaf7a4537ac840e5d59bf68e05277c86b4b50d2263466c0fcff184051e4",
+        "sha256_in_prefix": "20f3bcaf7a4537ac840e5d59bf68e05277c86b4b50d2263466c0fcff184051e4",
+        "size_in_bytes": 317
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/protocol_socket.py",
+        "path_type": "hardlink",
+        "sha256": "428b5a1c23ddeadf74dd6ffd7dad8bbffe6e125ab49e88abd828b5d1af7ced73",
+        "sha256_in_prefix": "428b5a1c23ddeadf74dd6ffd7dad8bbffe6e125ab49e88abd828b5d1af7ced73",
+        "size_in_bytes": 14299
+      },
+      {
+        "_path": "Lib/site-packages/serial/urlhandler/protocol_spy.py",
+        "path_type": "hardlink",
+        "sha256": "15d51a538dfe6e5d4a5d3cbf4b81e1cf2195e61a54b28a66f08a93ad7d955fee",
+        "sha256_in_prefix": "15d51a538dfe6e5d4a5d3cbf4b81e1cf2195e61a54b28a66f08a93ad7d955fee",
+        "size_in_bytes": 9130
+      },
+      {
+        "_path": "Lib/site-packages/serial/win32.py",
+        "path_type": "hardlink",
+        "sha256": "964eaba1df661e4ab381c8666aa077ca08939260164cd434d0827df39663bd32",
+        "sha256_in_prefix": "964eaba1df661e4ab381c8666aa077ca08939260164cd434d0827df39663bd32",
+        "size_in_bytes": 11138
+      },
+      {
+        "_path": "Scripts/pyserial-miniterm.exe",
+        "path_type": "hardlink",
+        "sha256": "e9b5a58da385febbb0c367223e900597e9626aebdae159f605d8540962f48da5",
+        "sha256_in_prefix": "e9b5a58da385febbb0c367223e900597e9626aebdae159f605d8540962f48da5",
+        "size_in_bytes": 108452
+      },
+      {
+        "_path": "Scripts/pyserial-ports.exe",
+        "path_type": "hardlink",
+        "sha256": "f819e90695f15cee25bfb74572d8032987f0c0344098af916df820c719abf9fd",
+        "sha256_in_prefix": "f819e90695f15cee25bfb74572d8032987f0c0344098af916df820c719abf9fd",
+        "size_in_bytes": 108454
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "pyserial",
+  "sha256": "338a28e91d84618bb412642ca845f249d5429ce629b1e8d9629961c477ec825a",
+  "size": 220376,
+  "subdir": "win-64",
+  "timestamp": 1699563506000,
+  "url": "https://repo.anaconda.com/pkgs/main/win-64/pyserial-3.5-py312haa95532_1.conda",
+  "version": "3.5"
+}
