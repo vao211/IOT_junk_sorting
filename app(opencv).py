@@ -116,7 +116,7 @@ def get_frame_from_url(url):
 def main():
     global detected_objects
     detected_objects = {}
-    url = 'http://192.168.1.4/320x320.jpg'
+    url = 'http://192.168.142.243/320x320.jpg'
 
     while True:
         img = get_frame_from_url(url)
@@ -132,7 +132,7 @@ def main():
         findObjects(outputs, img)
 
         cv2.imshow('Object Detection', img)
-        if cv2.waitKey(5) & 0xFF == ord('q'):
+        if cv2.waitKey(int(1000/15)) & 0xFF == ord('q'):
             break
 
     cv2.destroyAllWindows()

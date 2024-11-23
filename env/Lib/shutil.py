@@ -302,11 +302,15 @@ def copymode(src, dst, *, follow_symlinks=True):
     sys.audit("shutil.copymode", src, dst)
 
     if not follow_symlinks and _islink(src) and os.path.islink(dst):
-        if hasattr(os, 'lchmod'):
+        if os.name == 'nt':
+            stat_func, chmod_func = os.lstat, os.chmod
+        elif hasattr(os, 'lchmod'):
             stat_func, chmod_func = os.lstat, os.lchmod
         else:
             return
     else:
+        if os.name == 'nt' and os.path.islink(dst):
+            dst = os.path.realpath(dst, strict=True)
         stat_func, chmod_func = _stat, os.chmod
 
     st = stat_func(src)
@@ -382,8 +386,16 @@ def copystat(src, dst, *, follow_symlinks=True):
     # We must copy extended attributes before the file is (potentially)
     # chmod()'ed read-only, otherwise setxattr() will error with -EACCES.
     _copyxattr(src, dst, follow_symlinks=follow)
+    _chmod = lookup("chmod")
+    if os.name == 'nt':
+        if follow:
+            if os.path.islink(dst):
+                dst = os.path.realpath(dst, strict=True)
+        else:
+            def _chmod(*args, **kwargs):
+                os.chmod(*args)
     try:
-        lookup("chmod")(dst, mode, follow_symlinks=follow)
+        _chmod(dst, mode, follow_symlinks=follow)
     except NotImplementedError:
         # if we got a NotImplementedError, it's because
         #   * follow_symlinks=False,
@@ -481,7 +493,7 @@ def _copytree(entries, src, dst, symlinks, ignore, copy_function,
     if ignore is not None:
         ignored_names = ignore(os.fspath(src), [x.name for x in entries])
     else:
-        ignored_names = set()
+        ignored_names = ()
 
     os.makedirs(dst, exist_ok=dirs_exist_ok)
     errors = []
@@ -664,7 +676,7 @@ def _rmtree_safe_fd(topfd, path, onexc):
                     continue
         if is_dir:
             try:
-                dirfd = os.open(entry.name, os.O_RDONLY, dir_fd=topfd)
+                dirfd = os.open(entry.name, os.O_RDONLY | os.O_NONBLOCK, dir_fd=topfd)
                 dirfd_closed = False
             except OSError as err:
                 onexc(os.open, fullname, err)
@@ -674,7 +686,12 @@ def _rmtree_safe_fd(topfd, path, onexc):
                         _rmtree_safe_fd(dirfd, fullname, onexc)
                         try:
                             os.close(dirfd)
+                        except OSError as err:
+                            # close() should not be retried after an error.
                             dirfd_closed = True
+                            onexc(os.close, fullname, err)
+                        dirfd_closed = True
+                        try:
                             os.rmdir(entry.name, dir_fd=topfd)
                         except OSError as err:
                             onexc(os.rmdir, fullname, err)
@@ -689,7 +706,10 @@ def _rmtree_safe_fd(topfd, path, onexc):
                             onexc(os.path.islink, fullname, err)
                 finally:
                     if not dirfd_closed:
-                        os.close(dirfd)
+                        try:
+                            os.close(dirfd)
+                        except OSError as err:
+                            onexc(os.close, fullname, err)
         else:
             try:
                 os.unlink(entry.name, dir_fd=topfd)
@@ -721,10 +741,6 @@ def rmtree(path, ignore_errors=False, onerror=None, *, onexc=None, dir_fd=None):
     onerror is deprecated and only remains for backwards compatibility.
     If both onerror and onexc are set, onerror is ignored and onexc is used.
     """
-
-    if onerror is not None:
-        warnings.warn("onerror argument is deprecated, use onexc instead",
-                      DeprecationWarning, stacklevel=2)
 
     sys.audit("shutil.rmtree", path, dir_fd)
     if ignore_errors:
@@ -759,7 +775,7 @@ def rmtree(path, ignore_errors=False, onerror=None, *, onexc=None, dir_fd=None):
             onexc(os.lstat, path, err)
             return
         try:
-            fd = os.open(path, os.O_RDONLY, dir_fd=dir_fd)
+            fd = os.open(path, os.O_RDONLY | os.O_NONBLOCK, dir_fd=dir_fd)
             fd_closed = False
         except Exception as err:
             onexc(os.open, path, err)
@@ -769,7 +785,12 @@ def rmtree(path, ignore_errors=False, onerror=None, *, onexc=None, dir_fd=None):
                 _rmtree_safe_fd(fd, path, onexc)
                 try:
                     os.close(fd)
+                except OSError as err:
+                    # close() should not be retried after an error.
                     fd_closed = True
+                    onexc(os.close, path, err)
+                fd_closed = True
+                try:
                     os.rmdir(path, dir_fd=dir_fd)
                 except OSError as err:
                     onexc(os.rmdir, path, err)
@@ -781,7 +802,10 @@ def rmtree(path, ignore_errors=False, onerror=None, *, onexc=None, dir_fd=None):
                     onexc(os.path.islink, path, err)
         finally:
             if not fd_closed:
-                os.close(fd)
+                try:
+                    os.close(fd)
+                except OSError as err:
+                    onexc(os.close, path, err)
     else:
         if dir_fd is not None:
             raise NotImplementedError("dir_fd unavailable on this platform")
@@ -822,12 +846,12 @@ def move(src, dst, copy_function=copy2):
     similar to the Unix "mv" command. Return the file or directory's
     destination.
 
-    If the destination is a directory or a symlink to a directory, the source
-    is moved inside the directory. The destination path must not already
-    exist.
+    If dst is an existing directory or a symlink to a directory, then src is
+    moved inside that directory. The destination path in that directory must
+    not already exist.
 
-    If the destination already exists but is not a directory, it may be
-    overwritten depending on os.rename() semantics.
+    If dst already exists but is not a directory, it may be overwritten
+    depending on os.rename() semantics.
 
     If the destination is on our current filesystem, then rename() is used.
     Otherwise, src is copied to the destination and then removed. Symlinks are
@@ -846,7 +870,7 @@ def move(src, dst, copy_function=copy2):
     sys.audit("shutil.move", src, dst)
     real_dst = dst
     if os.path.isdir(dst):
-        if _samefile(src, dst):
+        if _samefile(src, dst) and not os.path.islink(src):
             # We might be on a case insensitive filesystem,
             # perform the rename anyway.
             os.rename(src, dst)
@@ -1554,8 +1578,16 @@ def which(cmd, mode=os.F_OK | os.X_OK, path=None):
         if use_bytes:
             pathext = [os.fsencode(ext) for ext in pathext]
 
-        # Always try checking the originally given cmd, if it doesn't match, try pathext
-        files = [cmd] + [cmd + ext for ext in pathext]
+        files = ([cmd] + [cmd + ext for ext in pathext])
+
+        # gh-109590. If we are looking for an executable, we need to look
+        # for a PATHEXT match. The first cmd is the direct match
+        # (e.g. python.exe instead of python)
+        # Check that direct match first if and only if the extension is in PATHEXT
+        # Otherwise check it last
+        suffix = os.path.splitext(files[0])[1].upper()
+        if mode & os.X_OK and not any(suffix == ext.upper() for ext in pathext):
+            files.append(files.pop(0))
     else:
         # On other platforms you don't have things like PATHEXT to tell you
         # what file suffixes are executable, so just pass on cmd as-is.

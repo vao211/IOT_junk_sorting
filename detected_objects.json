@@ -1,1 +1,22 @@
-{}
+{
+    "person": {
+        "count": 27,
+        "type": "Organic"
+    },
+    "laptop": {
+        "count": 6,
+        "type": "Inorganic"
+    },
+    "bottle": {
+        "count": 3,
+        "type": "Inorganic"
+    },
+    "chair": {
+        "count": 1,
+        "type": "Inorganic"
+    },
+    "mouse": {
+        "count": 1,
+        "type": "Inorganic"
+    }
+}

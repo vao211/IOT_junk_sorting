@@ -94,6 +94,7 @@ def findObjects(outputs, img):
                 arduino.write('1'.encode())
                 time.sleep(0.4)
             elif object_name in Inorganic:
+                time.sleep(1.2)
                 arduino.write('2'.encode())
                 time.sleep(0.4)
             
@@ -114,16 +115,17 @@ def get_frame_url(url):
         logging.error(f"Error fetching image: {e}")
         return None
 
-def dection_thread():
+def detection_thread():
     global detected_objects
     detected_objects = {}
-    url = 'http://192.168.1.4/320x320.jpg'
+    url = 'http://192.168.142.243/320x320.jpg'
 
     while True:
         img = get_frame_url(url)
         if img is None:
             continue
-
+        
+        #OpenCV procesing image
         blob = cv2.dnn.blobFromImage(img, 1 / 255, (whT, whT), [0, 0, 0], 1, crop=False)
         net.setInput(blob)
         layernames = net.getLayerNames()
@@ -142,8 +144,9 @@ def dection_thread():
         window.update()
 
 def start():
-    detection_thread = threading.Thread(target=dection_thread)
+    detection_thread = threading.Thread(target=detection_thread)
     detection_thread.daemon = True
+    time.sleep(1)
     detection_thread.start()
 
 def close():

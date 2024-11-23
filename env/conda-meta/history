@@ -85,3 +85,23 @@
 +conda-forge/win-64::vs2015_runtime-14.42.34433-hdffcdeb_23
 +defaults/win-64::pillow-11.0.0-py312hb5480e2_0
 # update specs: ['pillow']
+==> 2024-11-24 02:01:17 <==
+# cmd: C:\anaconda3\Scripts\conda-script.py install pandas openpyxl
+# conda version: 24.9.2
+-defaults/win-64::python-3.12.0-h1d929f7_0
+-defaults/win-64::zlib-1.2.13-h8cc25b3_1
++conda-forge/noarch::et_xmlfile-2.0.0-pyhd8ed1ab_0
++conda-forge/noarch::python-dateutil-2.9.0.post0-pyhff2d567_0
++conda-forge/noarch::python-tzdata-2024.2-pyhd8ed1ab_0
++conda-forge/noarch::pytz-2024.1-pyhd8ed1ab_0
++conda-forge/noarch::six-1.16.0-pyh6c4a22f_0
++conda-forge/win-64::libexpat-2.6.3-he0c23c2_0
++conda-forge/win-64::libsqlite-3.47.0-h2466b09_1
++conda-forge/win-64::libzlib-1.2.13-h2466b09_6
++conda-forge/win-64::openpyxl-3.1.5-py312he70551f_1
++conda-forge/win-64::pandas-2.2.3-py312h72972c8_1
++conda-forge/win-64::python-3.12.3-h2628c8c_0_cpython
++conda-forge/win-64::python_abi-3.12-5_cp312
++conda-forge/win-64::zlib-1.2.13-h2466b09_6
+# update specs: ['openpyxl', 'pandas']
+# neutered specs: ['python==3.12.3']
