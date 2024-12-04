@@ -1,18 +1,6 @@
 {
-    "person": {
-        "count": 60,
-        "type": "Organic"
-    },
-    "bed": {
+    "bottle": {
         "count": 1,
-        "type": "Inorganic"
-    },
-    "horse": {
-        "count": 1,
-        "type": "Organic"
-    },
-    "pottedplant": {
-        "count": 4,
         "type": "Inorganic"
     }
 }

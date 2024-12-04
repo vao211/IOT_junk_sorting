@@ -22,7 +22,7 @@ Inorganic = [
     'pottedplant', 'bed', 'diningtable', 'toilet', 'tvmonitor',
     'laptop', 'mouse', 'remote', 'keyboard', 'cell phone',
     'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book',
-    'clock', 'vase', 'scissors', 'teddy bear'
+    'clock', 'vase', 'scissors', 'teddy bear','toothbrush',
 ]
 Organic = [
     'banana', 'apple', 'sandwich', 'orange', 'broccoli',
@@ -105,13 +105,21 @@ def findObjects(outputs, img):
 
             object_name = classNames[classIds[i]]
             object_type = 'Organic' if object_name in Organic else 'Inorganic'
-            
+            if object_name in Organic:
+                object_type = 'Organic'
+            elif object_name in Inorganic:
+                object_type = 'Inorganic'
+                
             if object_name in Organic:
                 arduino.write('1'.encode())
-                time.sleep(0.4)
+                print(object_name)
+                print("send 1")
+                time.sleep(0.7)
             elif object_name in Inorganic:
                 arduino.write('2'.encode())
-                time.sleep(0.4)
+                print(object_name)
+                print("send 2")
+                time.sleep(0.7)
             
             detected_objects[object_name] = {
                 'count': detected_objects.get(object_name, {'count': 0})['count'] + 1,
@@ -133,7 +141,7 @@ def get_frame_url(url):
 def detection_thread():
     global detected_objects
     detected_objects = {}
-    url = 'http://192.168.1.5/320x320.jpg'
+    url = 'http://192.168.1.4/480x320.jpg'
 
     while True:
         img = get_frame_url(url)

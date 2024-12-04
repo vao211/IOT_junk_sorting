@@ -19,21 +19,21 @@ Inorganic = [
     'sports ball', 'kite', 'baseball bat', 'baseball glove',
     'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass',
     'cup', 'fork', 'knife', 'spoon', 'bowl', 'chair', 'sofa',
-    'pottedplant', 'bed', 'diningtable', 'toilet', 'tvmonitor',
-    'laptop', 'mouse', 'remote', 'keyboard', 'cell phone',
-    'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book',
+    'pottedplant', 'diningtable', 'toilet',
+     'mouse', 'remote', 'keyboard', 'cell phone',
+    'microwave', 'oven', 'toaster', 'sink', 'book',
     'clock', 'vase', 'scissors', 'teddy bear'
 ]
 Organic = [
-    'banana', 'apple', 'sandwich', 'orange', 'broccoli',
+    'banana', 'apple', 'sandwich', 'broccoli',
     'carrot', 'hot dog', 'pizza', 'donut', 'cake', 
     'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 
-    'bear', 'zebra', 'giraffe', 'person'
+    'bear', 'zebra', 'giraffe',
 ]
 
-arduino_port = 'COM15' 
-baud_rate = 9600
-arduino = serial.Serial(arduino_port, baud_rate)
+# arduino_port = 'COM15' 
+# baud_rate = 9600
+# arduino = serial.Serial(arduino_port, baud_rate)
 
 logging.basicConfig(
     filename='app.log',
@@ -103,12 +103,12 @@ def findObjects(outputs, img):
             object_name = classNames[classIds[i]]
             object_type = 'Organic' if object_name in Organic else 'Inorganic'
             
-            if object_name in Organic:
-                arduino.write('1'.encode())
-                time.sleep(0.4)
-            elif object_name in Inorganic:
-                arduino.write('2'.encode())
-                time.sleep(0.4)
+            # if object_name in Organic:
+            #     arduino.write('1'.encode())
+            #     time.sleep(0.4)
+            # elif object_name in Inorganic:
+            #     arduino.write('2'.encode())
+            #     time.sleep(0.4)
             
             detected_objects[object_name] = {
                 'count': detected_objects.get(object_name, {'count': 0})['count'] + 1,
@@ -131,7 +131,7 @@ def detection_thread():
     time.sleep(1)
     global detected_objects
     detected_objects = {}
-    url = 'http://192.168.17.243/320x320.jpg'
+    url = 'http://192.168.1.7/320x320.jpg'
 
     while True:
         img = get_frame_url(url)
@@ -162,7 +162,7 @@ def start():
 
 def close():
     if messagebox.askokcancel("Quit", "Do you want to quit?"):
-        arduino.close()
+        # arduino.close()
         window.destroy()
 
 window = tk.Tk()
