@@ -65,7 +65,7 @@ def findObjects(outputs, img):
     bbox, classIds, confs = [], [], []
 
     for output in outputs:
-        for det in output:
+        for det in output:    
             scores = det[5:]
             classId = np.argmax(scores)
             confidence = scores[classId]
@@ -116,7 +116,7 @@ def get_frame_from_url(url):
 def main():
     global detected_objects
     detected_objects = {}
-    url = 'http://192.168.142.243/320x320.jpg'
+    url = 'http://192.168.17.243/320x320.jpg'
 
     while True:
         img = get_frame_from_url(url)

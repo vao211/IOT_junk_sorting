@@ -9,6 +9,7 @@ import threading
 import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
+import pandas as pd
 
 Inorganic = [
     'bicycle', 'car', 'motorbike', 'aeroplane', 'bus',
@@ -27,7 +28,7 @@ Organic = [
     'banana', 'apple', 'sandwich', 'orange', 'broccoli',
     'carrot', 'hot dog', 'pizza', 'donut', 'cake', 
     'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 
-    'bear', 'zebra', 'giraffe', 'person'
+    'bear', 'zebra', 'giraffe',
 ]
 
 arduino_port = 'COM15' 
@@ -41,8 +42,8 @@ logging.basicConfig(
 )
 
 whT = 224
-confThreshold = 0.5
-nmsThreshold = 0.3
+confident = 0.5
+nonMaxSupr = 0.3
 classesfile = 'coco.names'
 modelConfig = 'yolov3.cfg'
 modelWeights = 'yolov3.weights'
@@ -60,24 +61,39 @@ def write_to_json(data):
     with open(json_file_path, 'w') as json_file:
         json.dump(data, json_file, indent=4)
 
+        
+excel_file_path = 'dectected_objects.xlsx'
+def export_to_excel():
+    try:
+        with open(json_file_path, 'r') as json_file:
+            data = json.load(json_file)
+
+        df = pd.DataFrame.from_dict(data, orient='index')
+
+        df.to_excel(excel_file_path, index=True, sheet_name='Detected Objects')
+        messagebox.showinfo("Export Successful", f"Data exported to {excel_file_path} successfully.")
+    except Exception as e:
+        logging.error(f"Error exporting to Excel: {e}")
+        
+        
 def findObjects(outputs, img):
     global detected_objects
     hT, wT, _ = img.shape
     bbox, classIds, confs = [], [], []
 
     for output in outputs:
-        for det in output:
+        for det in output:     #list obj
             scores = det[5:]
             classId = np.argmax(scores)
             confidence = scores[classId]
-            if confidence > confThreshold:
+            if confidence > confident:
                 w, h = int(det[2] * wT), int(det[3] * hT)
                 x, y = int((det[0] * wT) - w / 2), int((det[1] * hT) - h / 2)
                 bbox.append([x, y, w, h])
                 classIds.append(classId)
                 confs.append(float(confidence))
 
-    indices = cv2.dnn.NMSBoxes(bbox, confs, confThreshold, nmsThreshold)
+    indices = cv2.dnn.NMSBoxes(bbox, confs, confident, nonMaxSupr)
 
     if indices is not None and len(indices) > 0:
         for i in indices.flatten():
@@ -94,7 +110,6 @@ def findObjects(outputs, img):
                 arduino.write('1'.encode())
                 time.sleep(0.4)
             elif object_name in Inorganic:
-                time.sleep(1.2)
                 arduino.write('2'.encode())
                 time.sleep(0.4)
             
@@ -118,7 +133,7 @@ def get_frame_url(url):
 def detection_thread():
     global detected_objects
     detected_objects = {}
-    url = 'http://192.168.142.243/320x320.jpg'
+    url = 'http://192.168.1.5/320x320.jpg'
 
     while True:
         img = get_frame_url(url)
@@ -126,7 +141,7 @@ def detection_thread():
             continue
         
         #OpenCV procesing image
-        blob = cv2.dnn.blobFromImage(img, 1 / 255, (whT, whT), [0, 0, 0], 1, crop=False)
+        blob = cv2.dnn.blobFromImage(img, 1 / 255, (whT, whT), [0, 0, 0], 1, crop=False)  #2chuẩn hóa về 0-1
         net.setInput(blob)
         layernames = net.getLayerNames()
         outputNames = [layernames[i - 1] for i in net.getUnconnectedOutLayers().flatten()]
@@ -144,10 +159,10 @@ def detection_thread():
         window.update()
 
 def start():
-    detection_thread = threading.Thread(target=detection_thread)
-    detection_thread.daemon = True
+    detection = threading.Thread(target=detection_thread)
+    detection.daemon = True
     time.sleep(1)
-    detection_thread.start()
+    detection.start()
 
 def close():
     if messagebox.askokcancel("Quit", "Do you want to quit?"):
@@ -165,6 +180,11 @@ start_button.pack(pady=20)
 
 quit_button = tk.Button(window, text="Quit", command=close)
 quit_button.pack(pady=20)
+
+#Add an Export button
+export_button = tk.Button(window, text="Export to Excel", command=export_to_excel)
+export_button.pack(pady=20)
+
 
 window.protocol("WM_DELETE_WINDOW", close)
 

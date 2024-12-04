@@ -1,22 +1,18 @@
 {
     "person": {
-        "count": 27,
+        "count": 60,
         "type": "Organic"
     },
-    "laptop": {
-        "count": 6,
-        "type": "Inorganic"
-    },
-    "bottle": {
-        "count": 3,
-        "type": "Inorganic"
-    },
-    "chair": {
+    "bed": {
         "count": 1,
         "type": "Inorganic"
     },
-    "mouse": {
+    "horse": {
         "count": 1,
+        "type": "Organic"
+    },
+    "pottedplant": {
+        "count": 4,
         "type": "Inorganic"
     }
 }

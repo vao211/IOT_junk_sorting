@@ -4,10 +4,11 @@ import logging
 import serial
 import json
 import tkinter as tk
-from tkinter import Label
+from tkinter import Label, messagebox
 from threading import Thread
 from PIL import Image, ImageTk
 import time
+import pandas as pd
 
 logging.basicConfig(
     filename='app.log',
@@ -36,8 +37,8 @@ Organic = [
 ]
 
 whT = 224
-confThreshold = 0.5
-nmsThreshold = 0.3
+confThreshold = 0.7
+nmsThreshold = 0.4
 classesfile = 'coco.names'
 modelConfig = 'yolov3.cfg'
 modelWeights = 'yolov3.weights'
@@ -46,18 +47,35 @@ with open(classesfile, 'rt', encoding='utf-8') as f:
     classNames = f.read().rstrip('\n').split('\n')
 
 net = cv2.dnn.readNetFromDarknet(modelConfig, modelWeights)
-net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
-net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
+net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
 
-# arduino_port = 'COM15'
-# baud_rate = 9600
-# arduino = serial.Serial(arduino_port, baud_rate)
+arduino_port = 'COM15'
+baud_rate = 9600
+arduino = serial.Serial(arduino_port, baud_rate)
 
 json_file_path = 'detected_objects.json'
 
 def write_to_json(data):
     with open(json_file_path, 'w') as json_file:
         json.dump(data, json_file, indent=4)
+
+excel_file_path = 'dectected_objects.xlsx'
+def write_to_json(data):
+    with open(json_file_path, 'w') as json_file:
+        json.dump(data, json_file, indent=4)
+        
+def export_to_excel():
+    try:
+        with open(json_file_path, 'r') as json_file:
+            data = json.load(json_file)
+
+        df = pd.DataFrame.from_dict(data, orient='index')
+
+        df.to_excel(excel_file_path, index=True, sheet_name='Detected Objects')
+        messagebox.showinfo("Export Successful", f"Data exported to {excel_file_path} successfully.")
+    except Exception as e:
+        logging.error(f"Error exporting to Excel: {e}")
 
 class ObjectDetectionApp:
     def __init__(self, window):
@@ -110,15 +128,15 @@ class ObjectDetectionApp:
                     'type': object_type
                 }
 
-                # if object_name in Organic:
-                #     time.sleep(0.2)
-                #     arduino.write('1'.encode())
-                #     time.sleep(0.6)
+                if object_name in Organic:
+                    time.sleep(0.2)
+                    arduino.write('1'.encode())
+                    time.sleep(0.6)
                     
-                # elif object_name in Inorganic:
-                #     time.sleep(0.3)
-                #     arduino.write('2'.encode())
-                #     time.sleep(0.6)
+                elif object_name in Inorganic:
+                    time.sleep(0.3)
+                    arduino.write('2'.encode())
+                    time.sleep(0.6)
         write_to_json(self.detected_objects)
 
     def video_stream(self):
@@ -152,5 +170,8 @@ class ObjectDetectionApp:
 if __name__ == '__main__':
     root = tk.Tk()
     app = ObjectDetectionApp(root)
+    #Add an Export button
+    export_button = tk.Button(root, text="Export to Excel", command=export_to_excel)
+    export_button.pack(pady=20)
     root.protocol("WM_DELETE_WINDOW", app.quit)
     root.mainloop()

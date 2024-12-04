@@ -56,11 +56,11 @@ net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
 json_file_path = 'detected_objects.json'
-excel_file_path = 'dectected_objects.xlsx'
+
 def write_to_json(data):
     with open(json_file_path, 'w') as json_file:
         json.dump(data, json_file, indent=4)
-        
+excel_file_path = 'dectected_objects.xlsx'
 def export_to_excel():
     try:
         with open(json_file_path, 'r') as json_file:
@@ -107,7 +107,6 @@ def findObjects(outputs, img):
                 arduino.write('1'.encode())
                 time.sleep(0.4)
             elif object_name in Inorganic:
-                time.sleep(1.2)
                 arduino.write('2'.encode())
                 time.sleep(0.4)
             
@@ -129,16 +128,16 @@ def get_frame_url(url):
         return None
 
 def detection_thread():
+    time.sleep(1)
     global detected_objects
     detected_objects = {}
-    url = 'http://192.168.142.243/320x320.jpg'
+    url = 'http://192.168.17.243/320x320.jpg'
 
     while True:
         img = get_frame_url(url)
         if img is None:
             continue
         
-        #OpenCV procesing image
         blob = cv2.dnn.blobFromImage(img, 1 / 255, (whT, whT), [0, 0, 0], 1, crop=False)
         net.setInput(blob)
         layernames = net.getLayerNames()
@@ -157,10 +156,9 @@ def detection_thread():
         window.update()
 
 def start():
-    detection_thread = threading.Thread(target=detection_thread)
-    detection_thread.daemon = True
-    time.sleep(1)
-    detection_thread.start()
+    detection = threading.Thread(target=detection_thread)
+    detection.daemon = True
+    detection.start()
 
 def close():
     if messagebox.askokcancel("Quit", "Do you want to quit?"):
