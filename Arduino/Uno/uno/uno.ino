@@ -57,7 +57,7 @@ void Servo1(){
     return;
   }
     servo1.write(0);
-    delay(200);
+    // delay(200);
 }
 
 void Servo2(){
@@ -68,7 +68,7 @@ void Servo2(){
     return;
   }
   servo2.write(0);
-  delay(200);
+  // delay(200);
 }
 void loop() {
   Servo3();

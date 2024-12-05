@@ -141,7 +141,7 @@ def get_frame_url(url):
 def detection_thread():
     global detected_objects
     detected_objects = {}
-    url = 'http://192.168.1.4/480x320.jpg'
+    url = 'http://192.168.1.6/480x320.jpg'
 
     while True:
         img = get_frame_url(url)

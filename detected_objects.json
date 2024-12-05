@@ -1,14 +1,1 @@
-{
-    "clock": {
-        "count": 1,
-        "type": "Inorganic"
-    },
-    "donut": {
-        "count": 2,
-        "type": "Organic"
-    },
-    "person": {
-        "count": 1,
-        "type": "Inorganic"
-    }
-}
+{}
