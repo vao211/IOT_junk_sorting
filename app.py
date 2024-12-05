@@ -114,12 +114,12 @@ def findObjects(outputs, img):
                 arduino.write('1'.encode())
                 print(object_name)
                 print("send 1")
-                time.sleep(0.7)
+                time.sleep(2)
             elif object_name in Inorganic:
                 arduino.write('2'.encode())
                 print(object_name)
                 print("send 2")
-                time.sleep(0.7)
+                time.sleep(2)
             
             detected_objects[object_name] = {
                 'count': detected_objects.get(object_name, {'count': 0})['count'] + 1,
