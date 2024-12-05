@@ -1,1 +1,10 @@
-{}
+{
+    "hot dog": {
+        "count": 1,
+        "type": "Organic"
+    },
+    "laptop": {
+        "count": 1,
+        "type": "Inorganic"
+    }
+}

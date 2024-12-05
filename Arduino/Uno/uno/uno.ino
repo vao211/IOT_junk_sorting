@@ -41,8 +41,8 @@ void getCommand(){
 void Servo3(){
     getCommand();
   if (command == 1 || command ==2){
-    servo3.write(150);
-    delay(200);
+    servo3.write(70);
+    delay(150);
     return;
   }
     servo3.write(0);
@@ -51,9 +51,9 @@ void Servo3(){
 }
 void Servo1(){
   if (dis1 < 5 && dis1 > 0 && command ==1){
-    servo1.write(160);
+    servo1.write(130);
     command = 0;
-    delay(200);
+    delay(150);
     return;
   }
     servo1.write(0);
@@ -62,9 +62,9 @@ void Servo1(){
 
 void Servo2(){
   if (dis2 < 5 && dis2 >0 && command == 2){
-    servo2.write(160);
+    servo2.write(130);
     command = 0;
-    delay(200);
+    delay(150);
     return;
   }
   servo2.write(0);

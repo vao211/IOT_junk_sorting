@@ -10,7 +10,7 @@ import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
 import pandas as pd
-
+unsed = ['tvmonitor','toothbrush','diningtable','bed', 'pottedplant','orange',]
 Inorganic = [
     'bicycle', 'car', 'motorbike', 'aeroplane', 'bus',
     'train', 'truck', 'boat', 'traffic light', 'fire hydrant',
@@ -19,13 +19,13 @@ Inorganic = [
     'sports ball', 'kite', 'baseball bat', 'baseball glove',
     'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass',
     'cup', 'fork', 'knife', 'spoon', 'bowl', 'chair', 'sofa',
-    'pottedplant', 'bed', 'diningtable', 'toilet', 'tvmonitor',
+    'toilet',
     'laptop', 'mouse', 'remote', 'keyboard', 'cell phone',
     'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book',
-    'clock', 'vase', 'scissors', 'teddy bear','toothbrush',
+    'clock', 'vase', 'scissors', 'teddy bear',
 ]
 Organic = [
-    'banana', 'apple', 'sandwich', 'orange', 'broccoli',
+    'banana', 'apple', 'sandwich',  'broccoli',
     'carrot', 'hot dog', 'pizza', 'donut', 'cake', 
     'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 
     'bear', 'zebra', 'giraffe',
@@ -109,23 +109,23 @@ def findObjects(outputs, img):
                 object_type = 'Organic'
             elif object_name in Inorganic:
                 object_type = 'Inorganic'
-                
-            if object_name in Organic:
-                arduino.write('1'.encode())
-                print(object_name)
-                print("send 1")
-                time.sleep(2)
-            elif object_name in Inorganic:
-                arduino.write('2'.encode())
-                print(object_name)
-                print("send 2")
-                time.sleep(2)
             
-            detected_objects[object_name] = {
-                'count': detected_objects.get(object_name, {'count': 0})['count'] + 1,
-                'type': object_type
-            }
+            if object_name in Organic or object_name in Inorganic:
+                if object_name in Organic:
+                    arduino.write('1'.encode())
+                    print(object_name)
+                    print("send 1")
+                    time.sleep(2)
+                elif object_name in Inorganic:
+                    arduino.write('2'.encode())
+                    print(object_name)
+                    print("send 2")
+                    time.sleep(2)
 
+                detected_objects[object_name] = {
+                    'count': detected_objects.get(object_name, {'count': 0})['count'] + 1,
+                    'type': object_type
+                }
     write_to_json(detected_objects)
 
 def get_frame_url(url):
