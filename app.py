@@ -10,13 +10,13 @@ import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
 import pandas as pd
-unsed = ['tvmonitor','toothbrush','diningtable','bed', 'pottedplant','orange',]
+unsed = ['tvmonitor','toothbrush','diningtable','bed', 'pottedplant','orange','traffic light', 'train','sports ball','truck',]
 Inorganic = [
     'bicycle', 'car', 'motorbike', 'aeroplane', 'bus',
-    'train', 'truck', 'boat', 'traffic light', 'fire hydrant',
+    'boat', 'fire hydrant',
     'stop sign', 'parking meter', 'bench', 'backpack', 'umbrella',
     'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard',
-    'sports ball', 'kite', 'baseball bat', 'baseball glove',
+    'kite', 'baseball bat', 'baseball glove',
     'skateboard', 'surfboard', 'tennis racket', 'bottle', 'wine glass',
     'cup', 'fork', 'knife', 'spoon', 'bowl', 'chair', 'sofa',
     'toilet',

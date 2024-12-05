@@ -1,9 +1,25 @@
 {
-    "hot dog": {
-        "count": 1,
+    "cup": {
+        "count": 3,
+        "type": "Inorganic"
+    },
+    "donut": {
+        "count": 4,
         "type": "Organic"
     },
-    "laptop": {
+    "apple": {
+        "count": 8,
+        "type": "Organic"
+    },
+    "clock": {
+        "count": 2,
+        "type": "Inorganic"
+    },
+    "truck": {
+        "count": 1,
+        "type": "Inorganic"
+    },
+    "car": {
         "count": 1,
         "type": "Inorganic"
     }

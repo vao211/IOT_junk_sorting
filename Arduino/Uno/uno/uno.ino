@@ -41,7 +41,7 @@ void getCommand(){
 void Servo3(){
     getCommand();
   if (command == 1 || command ==2){
-    servo3.write(70);
+    servo3.write(90);
     delay(150);
     return;
   }
