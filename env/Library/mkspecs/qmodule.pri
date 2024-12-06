@@ -1,5 +1,5 @@
-EXTRA_INCLUDEPATH += C:/Users/NGAIVINH/Desktop/App/env\\Library\\include
-EXTRA_LIBDIR += C:/Users/NGAIVINH/Desktop/App/env\\Library\\lib
+EXTRA_INCLUDEPATH += c:/Users/NGAIVINH/Desktop/App/Python/env\\Library\\include
+EXTRA_LIBDIR += c:/Users/NGAIVINH/Desktop/App/Python/env\\Library\\lib
 QT_CPU_FEATURES.x86_64 = sse sse2
 QT.global_private.enabled_features = sse2 alloca_malloc_h alloca avx2 dbus gui network release_tools relocatable sql system-zlib testlib widgets xml zstd
 QT.global_private.disabled_features = alloca_h android-style-assets private_tests dbus-linked dlopen gc_binaries intelcet libudev posix_fallocate reduce_exports reduce_relocations stack-protector-strong

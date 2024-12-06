@@ -55,7 +55,7 @@ add_library(hdf5-static STATIC IMPORTED)
 
 set_target_properties(hdf5-static PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "C:/Users/NGAIVINH/Desktop/App/env/Library/lib/z.lib;\$<LINK_ONLY:\$<\$<BOOL:OFF>:>>;\$<\$<NOT:\$<PLATFORM_ID:Windows>>:>"
+  INTERFACE_LINK_LIBRARIES "c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/z.lib;\$<LINK_ONLY:\$<\$<BOOL:OFF>:>>;\$<\$<NOT:\$<PLATFORM_ID:Windows>>:>"
 )
 
 # Create imported target hdf5-shared

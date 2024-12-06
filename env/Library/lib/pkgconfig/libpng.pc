@@ -1,7 +1,7 @@
-prefix=C:/Users/NGAIVINH/Desktop/App/env/Library
-exec_prefix=C:/Users/NGAIVINH/Desktop/App/env/Library
-libdir=C:/Users/NGAIVINH/Desktop/App/env/Library/lib
-includedir=C:/Users/NGAIVINH/Desktop/App/env/Library/include/libpng16
+prefix=c:/Users/NGAIVINH/Desktop/App/Python/env/Library
+exec_prefix=c:/Users/NGAIVINH/Desktop/App/Python/env/Library
+libdir=c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib
+includedir=c:/Users/NGAIVINH/Desktop/App/Python/env/Library/include/libpng16
 
 Name: libpng
 Description: Loads and saves PNG files

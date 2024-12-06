@@ -10,7 +10,8 @@
 """
 #    This module is maintained by Marc-Andre Lemburg <mal@egenix.com>.
 #    If you find problems, please submit bug reports/patches via the
-#    Python bug tracker (http://bugs.python.org) and assign them to "lemburg".
+#    Python issue tracker (https://github.com/python/cpython/issues) and
+#    mention "@malemburg".
 #
 #    Still needed:
 #    * support for MS-DOS (PythonDX ?)
@@ -458,12 +459,7 @@ def win32_ver(release='', version='', csd='', ptype=''):
 def _mac_ver_xml():
     fn = '/System/Library/CoreServices/SystemVersion.plist'
     if not os.path.exists(fn):
-        if 'SDKROOT' in os.environ:
-            fn = os.environ['SDKROOT'] + fn
-            if not os.path.exists(fn):
-                return None
-        else:
-            return None
+        return None
 
     try:
         import plistlib
@@ -1072,7 +1068,7 @@ def _sys_version(sys_version=None):
         return result
 
     sys_version_parser = re.compile(
-    r'([\w.+]+)\s*(?:\ \|\ packaged\ by\ conda\-forge\ \|)?\s*'
+        r'([\w.+]+)\s*(?:\ \|\ packaged\ by\ Anaconda,\ Inc\.\ \|)?\s*'
         r'\(#?([^,]+)'  # "(#buildno"
         r'(?:,\s*([\w ]*)'  # ", builddate"
         r'(?:,\s*([\w :]*))?)?\)\s*'  # ", buildtime)<space>"

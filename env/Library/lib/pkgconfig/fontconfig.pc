@@ -1,9 +1,9 @@
-prefix=C:/Users/NGAIVINH/Desktop/App/env/Library
+prefix=c:/Users/NGAIVINH/Desktop/App/Python/env/Library
 includedir=${prefix}/include
 libdir=${prefix}/lib
 
-sysconfdir=C:/Users/NGAIVINH/Desktop/App/env/Library/etc
-localstatedir=C:/Users/NGAIVINH/Desktop/App/env/Library/var
+sysconfdir=c:/Users/NGAIVINH/Desktop/App/Python/env/Library/etc
+localstatedir=c:/Users/NGAIVINH/Desktop/App/Python/env/Library/var
 confdir=${sysconfdir}/fonts
 cachedir=${localstatedir}/cache/fontconfig
 
@@ -12,5 +12,5 @@ Description: Font configuration and customization library
 Version: 2.14.1
 Requires: freetype2 >=  21.0.15
 Libs: -L${libdir} -lfontconfig
-Libs.private: C:/Users/NGAIVINH/Desktop/App/env/Library/lib/expat.lib
+Libs.private: c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/expat.lib
 Cflags: -I${includedir}

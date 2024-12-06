@@ -453,7 +453,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_c15n97j9s1/croot/harfbuzz_1692994415069/_h_env",
         "sha256": "103883da65025040bd8dfee6299887359897aea85afa75dbd60e1ad831478561",
-        "sha256_in_prefix": "8a3c2e7f5e7efb7ab78ac66bafe6f078b4af810fc89fe40738abc85b0b2de7fd",
+        "sha256_in_prefix": "24f2ffdcb7a7090514abcb2ca73453529025a18dd2f3c1a0509d6bb62a261c05",
         "size_in_bytes": 354
       },
       {
@@ -462,7 +462,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_c15n97j9s1/croot/harfbuzz_1692994415069/_h_env",
         "sha256": "1c986caf473e62ad94eb5f93113f50ff995ef9274811d46c4e0b28701855c519",
-        "sha256_in_prefix": "a0b3541674bcac45fa39cd2eff8f889b06bd89927dd1edd2f3149e9951777798",
+        "sha256_in_prefix": "b8e3af93d9f1ad753d8d729090b297c71c096a93ace507a48f305432fc0933ed",
         "size_in_bytes": 412
       },
       {
@@ -471,7 +471,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_c15n97j9s1/croot/harfbuzz_1692994415069/_h_env",
         "sha256": "94aaca6e4086b26df1c2fc9154f55cb6278d0147feebcda7d6dfbfab6778d19f",
-        "sha256_in_prefix": "5944c2aa536583de75c727221b77448245a9e1b1f0ecf8ef11d109effc2d4ce2",
+        "sha256_in_prefix": "4242944260c9b6328b6d1484b6ac3cb8b929ca62b1f6a740dbd72c4f46ede76f",
         "size_in_bytes": 303
       },
       {
@@ -480,7 +480,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_c15n97j9s1/croot/harfbuzz_1692994415069/_h_env",
         "sha256": "799c831d7b6521a4226f2b3b50e021441abb8c1524f3d9068fcd07964a0a374b",
-        "sha256_in_prefix": "447da409a24183b5e2fe5bce138d79e8b6e5ac7dd8420ac7197b6c5b8312334a",
+        "sha256_in_prefix": "7787abd49f7db2e547f8f6546e36c0dfe67225e8b482825c621a2e94e3dc4aa3",
         "size_in_bytes": 426
       },
       {

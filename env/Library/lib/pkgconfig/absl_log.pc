@@ -1,7 +1,7 @@
-prefix=C:/Users/NGAIVINH/Desktop/App/env/Library
+prefix=c:/Users/NGAIVINH/Desktop/App/Python/env/Library
 exec_prefix=${prefix}
-libdir=C:/Users/NGAIVINH/Desktop/App/env/Library/lib
-includedir=C:/Users/NGAIVINH/Desktop/App/env/Library/include
+libdir=c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib
+includedir=c:/Users/NGAIVINH/Desktop/App/Python/env/Library/include
 
 Name: absl_log
 Description: Abseil log library

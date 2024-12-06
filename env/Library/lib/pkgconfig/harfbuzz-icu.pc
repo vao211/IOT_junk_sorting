@@ -1,4 +1,4 @@
-prefix=C:/Users/NGAIVINH/Desktop/App/env/Library
+prefix=c:/Users/NGAIVINH/Desktop/App/Python/env/Library
 includedir=${prefix}/include
 libdir=${prefix}/lib
 
@@ -7,5 +7,5 @@ Description: HarfBuzz text shaping library ICU integration
 Version: 4.3.0
 Requires: harfbuzz =  4.3.0
 Libs: -L${libdir} -lharfbuzz-icu
-Libs.private: C:/Users/NGAIVINH/Desktop/App/env/Library/lib/icuuc.lib
+Libs.private: c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/icuuc.lib
 Cflags: -I${includedir}/harfbuzz

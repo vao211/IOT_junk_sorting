@@ -1,4 +1,4 @@
-prefix=C:/Users/NGAIVINH/Desktop/App/env/Library
+prefix=c:/Users/NGAIVINH/Desktop/App/Python/env/Library
 includedir=${prefix}/include
 libdir=${prefix}/lib
 
@@ -7,5 +7,5 @@ Description: PostgreSQL libpq library
 URL: https://www.postgresql.org/
 Version: 17.0
 Libs: -L${libdir} -lpq
-Libs.private: -lsecur32 -lwldap32 C:/Users/NGAIVINH/Desktop/App/env/Library/lib/libcrypto.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/libssl.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/gssapi64.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/krb5_64.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/comerr64.lib -lws2_32 -L${libdir} -lpgport C:/Users/NGAIVINH/Desktop/App/env/Library/lib/libcrypto.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/libssl.lib -lpgcommon C:/Users/NGAIVINH/Desktop/App/env/Library/lib/z.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/zstd.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/libcrypto.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/libssl.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/z.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/zstd.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/z.lib C:/Users/NGAIVINH/Desktop/App/env/Library/lib/zstd.lib
+Libs.private: -lsecur32 -lwldap32 c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/libcrypto.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/libssl.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/gssapi64.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/krb5_64.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/comerr64.lib -lws2_32 -L${libdir} -lpgport c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/libcrypto.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/libssl.lib -lpgcommon c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/z.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/zstd.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/libcrypto.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/libssl.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/z.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/zstd.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/z.lib c:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/zstd.lib
 Cflags: -I${includedir}

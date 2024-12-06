@@ -11,6 +11,8 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 import pandas as pd
 
+url = 'http://192.168.1.3/320x320.jpg'
+
 Inorganic = [
     'bicycle', 'car', 'motorbike', 'aeroplane', 'bus',
     'train', 'truck', 'boat', 'traffic light', 'fire hydrant',
@@ -44,9 +46,9 @@ logging.basicConfig(
 whT = 224
 confThreshold = 0.5
 nmsThreshold = 0.3
-classesfile = 'coco.names'
-modelConfig = 'yolov3.cfg'
-modelWeights = 'yolov3.weights'
+classesfile = 'module/coco.names'
+modelConfig = 'module/yolov3.cfg'
+modelWeights = 'module/yolov3.weights'
 
 with open(classesfile, 'rt', encoding='utf-8') as f:
     classNames = f.read().rstrip('\n').split('\n')
@@ -55,12 +57,12 @@ net = cv2.dnn.readNetFromDarknet(modelConfig, modelWeights)
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
-json_file_path = 'detected_objects.json'
+json_file_path = 'Export/detected_objects.json'
 
 def write_to_json(data):
     with open(json_file_path, 'w') as json_file:
         json.dump(data, json_file, indent=4)
-excel_file_path = 'dectected_objects.xlsx'
+excel_file_path = 'Export/dectected_objects.xlsx'
 def export_to_excel():
     try:
         with open(json_file_path, 'r') as json_file:
@@ -131,7 +133,7 @@ def detection_thread():
     time.sleep(1)
     global detected_objects
     detected_objects = {}
-    url = 'http://192.168.1.6/320x320.jpg'
+
 
     while True:
         img = get_frame_url(url)
@@ -167,6 +169,17 @@ def close():
 
 window = tk.Tk()
 window.title("Object sorting App")
+
+window_width = 720
+window_height = 550
+
+screen_width = window.winfo_screenwidth()
+screen_height = window.winfo_screenheight()
+
+x = (screen_width // 2) - (window_width // 2)
+y = (screen_height // 2) - (window_height // 2)
+
+window.geometry(f"{window_width}x{window_height}+{x}+{y}")
 
 video_label = tk.Label(window)
 video_label.pack()

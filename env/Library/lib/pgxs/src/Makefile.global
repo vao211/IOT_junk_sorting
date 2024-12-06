@@ -94,7 +94,7 @@ ifndef PGXS
 # Note that prefix, exec_prefix, and datarootdir aren't defined in a PGXS build;
 # makefiles may only use the derived variables such as bindir.
 
-prefix := C:/Users/NGAIVINH/Desktop/App/env\Library
+prefix := c:/Users/NGAIVINH/Desktop/App/Python/env\Library
 exec_prefix := ${prefix}
 datarootdir := ${prefix}/share
 
@@ -344,8 +344,8 @@ XGETTEXT =
 
 GZIP	= gzip
 BZIP2	= bzip2
-LZ4	= C:/Users/NGAIVINH/Desktop/App/env\Library\bin\lz4.EXE
-ZSTD	= C:/Users/NGAIVINH/Desktop/App/env\Library\bin\zstd.EXE
+LZ4	= c:/Users/NGAIVINH/Desktop/App/Python/env\Library\bin\lz4.EXE
+ZSTD	= c:/Users/NGAIVINH/Desktop/App/Python/env\Library\bin\zstd.EXE
 
 DOWNLOAD = wget -O $@ --no-use-server-timestamps
 #DOWNLOAD = curl -o $@

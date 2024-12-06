@@ -1744,7 +1744,7 @@
     ],
     "paths_version": 1
   },
-  "requested_spec": "pillow",
+  "requested_spec": "None",
   "sha256": "fa271381283d459ff5e2ca6b69cd5c2bf9157fc79a588fe5baf305442a867701",
   "size": 919863,
   "subdir": "win-64",

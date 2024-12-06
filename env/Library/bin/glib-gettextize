@@ -43,15 +43,15 @@ version=2.78.4
 try_ln_s=:
 
 # Directory where the sources are stored.
-prefix=C:/Users/NGAIVINH/Desktop/App/env/Library
+prefix=c:/Users/NGAIVINH/Desktop/App/Python/env/Library
 case `uname` in
 MINGW32*)
     prefix="`dirname $0`/.."
     ;;
 esac
 
-datarootdir=C:/Users/NGAIVINH/Desktop/App/env/Library/share
-datadir=C:/Users/NGAIVINH/Desktop/App/env/Library/share
+datarootdir=c:/Users/NGAIVINH/Desktop/App/Python/env/Library/share
+datadir=c:/Users/NGAIVINH/Desktop/App/Python/env/Library/share
 
 gettext_dir=$datadir/glib-2.0/gettext
 

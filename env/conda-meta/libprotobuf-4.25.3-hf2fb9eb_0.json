@@ -2059,7 +2059,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_61bt2u7lys/croot/libprotobuf-split_1716567571061/_h_env",
         "sha256": "ceed1dd90b86d4b9c099eebdc78d59bc3a1c4eed80897dce9c7c4949677db406",
-        "sha256_in_prefix": "c23a401d84d3523987f6c2a5914bf675bcd0a5253048c911d5a34ee67c9ace59",
+        "sha256_in_prefix": "3db72f3da6ff9d5131edb327880e8d60f4376b42ec70b600e440c2cbac5360b9",
         "size_in_bytes": 570
       },
       {
@@ -2068,7 +2068,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_61bt2u7lys/croot/libprotobuf-split_1716567571061/_h_env",
         "sha256": "5e6aa7db3ec4e02520602549a58b8ac444ca9eae899a0b7766e16d1e82dffa48",
-        "sha256_in_prefix": "082a30743b5cafbd4b49581752499ace4b5b61b76a69271c7875025bf0425447",
+        "sha256_in_prefix": "982c646ae3d97b8f9ff415946afc71209ea4bdec1760b6bbee6e1cdb627ddcfc",
         "size_in_bytes": 570
       },
       {
@@ -2077,7 +2077,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_61bt2u7lys/croot/libprotobuf-split_1716567571061/_h_env",
         "sha256": "5fa656c94387f5746f57e6a269558d149da01a63ee49a3fe6e8bc8fa88de8e63",
-        "sha256_in_prefix": "5dc11ef317175794ac7c33108cf7292ab1f89f13c3614e51f3316963a3a84c70",
+        "sha256_in_prefix": "303b9253b019a2943037f87c0c6201be4458a8032efc55f4eb92596b1ef5a694",
         "size_in_bytes": 513
       },
       {

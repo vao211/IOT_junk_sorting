@@ -12,8 +12,8 @@
     "jpeg >=9e,<10a",
     "zstd >=1.5.2,<1.6.0a0",
     "libpng >=1.6.39,<1.7.0a0",
-    "krb5 >=1.20.1,<1.21.0a0",
     "openssl >=3.0.15,<4.0a0",
+    "krb5 >=1.20.1,<1.21.0a0",
     "sqlite >=3.45.3,<4.0a0",
     "icu >=73.1,<74.0a0",
     "libclang >=14.0.6,<15.0a0",
@@ -70940,7 +70940,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:\\\\b\\\\abs_76ir_ang7t\\\\croot\\\\qt-main_1731682134540\\\\_h_env",
         "sha256": "6d6374ed5275ff49b1bf312d18fba8bd8d3bbdaa596d7aff4fb57c4dda018f43",
-        "sha256_in_prefix": "c2730241c7c6e524079c79468356c35bd429809bf6f5b3cd7fec5eb54dd4b103",
+        "sha256_in_prefix": "151bf6180973d5d1641bef45e16e720768bc31eadada3d7413d0a9cb60b4003f",
         "size_in_bytes": 939
       },
       {

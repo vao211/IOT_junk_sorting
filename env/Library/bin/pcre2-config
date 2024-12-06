@@ -1,6 +1,6 @@
 #!/bin/sh
 
-prefix=C:/Users/NGAIVINH/Desktop/App/env/Library
+prefix=c:/Users/NGAIVINH/Desktop/App/Python/env/Library
 exec_prefix=${prefix}
 exec_prefix_set=no
 

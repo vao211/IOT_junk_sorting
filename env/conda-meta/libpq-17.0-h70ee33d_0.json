@@ -7,8 +7,8 @@
     "vc >=14.2,<15.0a0",
     "vs2015_runtime >=14.29.30133,<15.0a0",
     "zlib >=1.2.13,<1.3.0a0",
-    "krb5 >=1.20.1,<1.21.0a0",
-    "openssl >=3.0.15,<4.0a0"
+    "openssl >=3.0.15,<4.0a0",
+    "krb5 >=1.20.1,<1.21.0a0"
   ],
   "extracted_package_dir": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libpq-17.0-h70ee33d_0",
   "files": [
@@ -8767,7 +8767,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:\\b\\abs_62nraek7ih\\croot\\postgresql-split_1731539240463\\_h_env",
         "sha256": "48e9e7e2d1c578ac60fe06d94792cc4e519bf481dfb34eaf18691727ee9ebce9",
-        "sha256_in_prefix": "de647cc08f37e0e5f364d7e472eabd5da789ec73a5e5f598b5d1bf04a0de21fe",
+        "sha256_in_prefix": "0cdb797a40d38ada0142734018a7c79c042d7c6b713f43e94b5ad061b5321e62",
         "size_in_bytes": 35821
       },
       {
@@ -8867,7 +8867,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_62nraek7ih/croot/postgresql-split_1731539240463/_h_env",
         "sha256": "0650e8e7a280642b95b8b42a83a99e4d0d585f72b590f665af7a17eb975f03f9",
-        "sha256_in_prefix": "a819ea8c13ab72a3dc36b5125342f697a27d67b73d10150a7b8187cd93ad6757",
+        "sha256_in_prefix": "cfbe3cc9513ec11dd653e4f168d035035f4dadfcd39c0d3e26072a60e39cda0b",
         "size_in_bytes": 1238
       },
       {
@@ -8876,7 +8876,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_62nraek7ih/croot/postgresql-split_1731539240463/_h_env",
         "sha256": "5e8025a88b35858b4c1c238cb983db110663328bf23d546c0d61964e9bf6f7f1",
-        "sha256_in_prefix": "78b0fac5e1a0e2e665db98de11b01006241326cd72e10f209454639553b5c5fb",
+        "sha256_in_prefix": "6ee6910370966c2d3cb02771488b147bcd17fc42665c73fa0a9d990498f7fc25",
         "size_in_bytes": 1261
       },
       {
@@ -8885,7 +8885,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_62nraek7ih/croot/postgresql-split_1731539240463/_h_env",
         "sha256": "3b2c62fcf5adb1ee496381d3667503a476383c5f7208d6c01ffc3c84f860f9c0",
-        "sha256_in_prefix": "3b16add5bacd72291c8909493170715b3ad480d006e415b8b24857ae5934ba1a",
+        "sha256_in_prefix": "9f3c95af60d661e49eaa084ab38d4f61ff888c51f4bef69b4a90966c89dca5c5",
         "size_in_bytes": 1210
       },
       {
@@ -8894,7 +8894,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "C:/b/abs_62nraek7ih/croot/postgresql-split_1731539240463/_h_env",
         "sha256": "62fe6ef9a9a44325446077789912fe557e08aa7e13e680640200643f8cc6199c",
-        "sha256_in_prefix": "3a098c0de1183c2ecf4855f01ac1004e5fb82027747ab5ad9dcb1439c66dcbb9",
+        "sha256_in_prefix": "bcb79b5b720fc552b808585e932c6afb7918642e56bfbd2fb9484ea7a57179b1",
         "size_in_bytes": 1658
       },
       {

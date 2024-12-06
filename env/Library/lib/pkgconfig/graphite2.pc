@@ -2,6 +2,6 @@
 Name: Graphite2
 Description: Font rendering engine for Complex Scripts
 Version: 3.0.1
-Libs: -LC:/Users/NGAIVINH/Desktop/App/env/Library/lib -lgraphite2
-Cflags: -IC:/Users/NGAIVINH/Desktop/App/env/Library/include
+Libs: -Lc:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib -lgraphite2
+Cflags: -Ic:/Users/NGAIVINH/Desktop/App/Python/env/Library/include
 
