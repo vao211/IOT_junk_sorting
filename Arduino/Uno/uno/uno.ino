@@ -38,7 +38,7 @@ void getCommand(){
   command = Serial.read() - '0';
   }
 }
-void Servo3(){
+void Servo3(){ //auto gạt khi nhận đc vật
     getCommand();
   if (command == 1 || command ==2){
     servo3.write(90);
@@ -49,18 +49,16 @@ void Servo3(){
     delay(200);
     return;
 }
-void Servo1(){
+void Servo1(){ //gạt hữu cơ
   if (dis1 < 5 && dis1 > 0 && command ==1){
     servo1.write(130);
     command = 0;
     delay(150);
     return;
   }
-    servo1.write(0);
-    // delay(200);
 }
 
-void Servo2(){
+void Servo2(){ //gạt vô cơ
   if (dis2 < 5 && dis2 >0 && command == 2){
     servo2.write(130);
     command = 0;
@@ -68,11 +66,9 @@ void Servo2(){
     return;
   }
   servo2.write(0);
-  // delay(200);
 }
 void loop() {
   Servo3();
-  // Đo khoảng cách cảm biến 1
   digitalWrite(trigPin1, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin1, HIGH);
@@ -84,7 +80,6 @@ void loop() {
   Serial.print("Distance 1: ");
   Serial.println(dis1);
 
-  // Đo khoảng cách cảm biến 2
   digitalWrite(trigPin2, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin2, HIGH);
