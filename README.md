@@ -1,10 +1,10 @@
 # IOT Junk Sorting
 
 ## Overview
-IOT Junk Sorting is an IoT-based project designed to automatically sort waste into categories such as metal and organic materials. The project aims to educate children about waste sorting and promote environmental awareness through an intuitive and engaging system.
+IOT Junk Sorting is an IoT-based project designed to automatically sort waste into categories such as metal and organic materials using the YOLOv3 object detection model. The project aims to educate children about waste sorting and promote environmental awareness through an intuitive, user-friendly system.
 
 ## Features
-- **Automatic Waste Sorting**: Identifies and sorts waste into metal and organic categories using ESP32 Camera and OpenCV.
+- **Automatic Waste Sorting**: Utilizes YOLOv3 and ESP32 Camera to identify and classify waste into metal and organic categories.
 - **Control Interface**: Provides a Tkinter-based GUI for monitoring and managing the sorting process.
 - **IoT Integration**: Connects Arduino Uno and ESP32 Camera to collect data and control hardware components like servos and a conveyor belt.
 
@@ -17,9 +17,10 @@ IOT Junk Sorting is an IoT-based project designed to automatically sort waste in
   - Conveyor Belt: Moves waste through the sorting area.
 - **Software**:
   - Python: Core logic and GUI development.
+  - OpenCV with YOLOv3: Processes images and classifies waste using the YOLOv3 deep learning model.  
   - Tkinter: Graphical user interface for monitoring.
-  - OpenCV: Image processing for waste classification.
   - ESP32 WiFiCam Server Library: Handles ESP32 Camera communication.
+  - PySerial: Facilitates communication between Python and Arduino.
 - **IoT Communication**:
   - HTTP (RESTful API): Transfers data between ESP32 Camera and the control system.
 
@@ -28,6 +29,7 @@ IOT Junk Sorting is an IoT-based project designed to automatically sort waste in
 - Arduino IDE for programming Arduino Uno.
 - Python 3.x with libraries: `opencv-python`, `pyserial`, `tkinter`.
 - Hardware: Arduino Uno, ESP32 Camera, servo, ultrasonic sensor, conveyor belt.
+- Pre-trained YOLOv3 model weights and configuration files (module/coco.name, yolov3.weights, yolov3.cfg).
 
 ### Steps
 1. **Clone the Repository**:
